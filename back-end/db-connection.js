@@ -1,3 +1,4 @@
+const cors = require('cors')
 const express = require('express')
 const bodyParser = require('body-parser')
 const Sequelize = require('sequelize');
@@ -10,6 +11,8 @@ const sequelize = new Sequelize('my_datatbase', 'root', '', {
 })
 
 const app = express();
+app.use(cors())
+
 app.use(bodyParser.json())
 
 sequelize.authenticate()

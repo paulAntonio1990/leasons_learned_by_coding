@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Add a new user</h1>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="firstnameControl"> 
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Last Name" formControlName="lastnameControl">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="User Name" formControlName="usernameControl">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button (click)="save()" cdkFocusInitial>Ok</button> <!-- [mat-dialog-close]="data.animal" -->
+</mat-dialog-actions>
