@@ -30,14 +30,16 @@ Repo.hasMany(Comment)
 //     .then(() => console.log('created'))
 //     .catch((error) => console.log(error))
 
-app.post('/create', async (req, res, next) => {
-    try {
-        await sequelize.sync({force : true})
-        res.status(201).json({message : 'created'})
-    } catch (err) {
-        next(err)
-    }
-})
+
+// the above code was used only fo development purposes
+// app.post('/create', async (req, res, next) => {
+//     try {
+//         await sequelize.sync({force : true})
+//         res.status(201).json({message : 'created'})
+//     } catch (err) {
+//         next(err)
+//     }
+// })
 
 // user
 app.get('/users', async (req, res) => {
